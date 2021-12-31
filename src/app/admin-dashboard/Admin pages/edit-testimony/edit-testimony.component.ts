@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormControl, Validators } from "@angular/forms";
+import * as ClassicEditor from '@ckeditor/ckeditor5-build-classic';
 
 @Component({
   selector: 'app-edit-testimony',
@@ -8,7 +9,8 @@ import { FormGroup, FormControl, Validators } from "@angular/forms";
 })
 export class EditTestimonyComponent implements OnInit {
 
-
+  public Editor = ClassicEditor;
+  
   isAlert=false;
   alertMsg="User updated Successfully";
 
@@ -17,6 +19,15 @@ export class EditTestimonyComponent implements OnInit {
 
   selectedFile:any=null;
   fd=new FormData();
+
+  editTestimony={
+    name:"",
+    position:"",
+    Org:"",
+    title:"",
+    testi:"",
+    img:""
+  }
 
   constructor() { }
 

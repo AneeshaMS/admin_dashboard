@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormControl, Validators } from "@angular/forms";
+import * as ClassicEditor from '@ckeditor/ckeditor5-build-classic';
 
 @Component({
   selector: 'app-add-admin-user',
@@ -7,6 +8,8 @@ import { FormGroup, FormControl, Validators } from "@angular/forms";
   styleUrls: ['./add-admin-user.component.css']
 })
 export class AddAdminUserComponent implements OnInit {
+
+  public Editor = ClassicEditor;
   
   isAlert=false;
   alertMsg="User updated Successfully";

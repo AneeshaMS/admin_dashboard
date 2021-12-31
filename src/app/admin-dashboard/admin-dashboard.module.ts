@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { Ng2SearchPipeModule } from 'ng2-search-filter';
+import { CKEditorModule } from '@ckeditor/ckeditor5-angular';
 
 
 import { AdminDashboardRoutingModule } from './admin-dashboard-routing.module';
@@ -79,6 +80,7 @@ import { CorporateComponent } from './Admin pages/corporate/corporate.component'
     FormsModule,
     ReactiveFormsModule,
     Ng2SearchPipeModule,
+    CKEditorModule
     
   ],
   exports:[

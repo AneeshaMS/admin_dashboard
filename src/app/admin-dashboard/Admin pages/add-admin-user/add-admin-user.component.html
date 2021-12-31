@@ -183,52 +183,55 @@
                                                     <div class="col-12 col-sm-8 mt-4 mt-sm-0 text-start">
                                                         <div class="input-group input-group-dynamic mb-4">
                                                             <label class="form-label">User Name</label>
-                                                            <input required formControlName="usrname" name="usrname" type="text" [(ngModel)]="AdminUsers.username" class="form-control multisteps-form__input">
+                                                            <input required formControlName="usrname" name="username" type="text" [(ngModel)]="AdminUsers.username" class="form-control multisteps-form__input">
                                                         </div>
                                                         <span class="mb-2" *ngIf="usrname && usrname.invalid && usrname.touched" style="color:#D81B60; font-size: 12px;">Please enter username</span>
                                                     
                                                         <div class="input-group input-group-dynamic mb-4">
                                                             <label class="form-label">First Name</label>
-                                                            <input required type="text" class="form-control multisteps-form__input" [(ngModel)]="AdminUsers.firstname" formControlName="Fname">
+                                                            <input required type="text" class="form-control multisteps-form__input" name="firstname" [(ngModel)]="AdminUsers.firstname" formControlName="Fname">
                                                         </div>
                                                         <span class="mb-2" *ngIf="Fname && Fname.invalid && Fname.touched" style="color:#D81B60; font-size: 12px;">Please enter Firstname</span>
 
                                                         <div class="input-group input-group-dynamic mb-4">
                                                             <label class="form-label">Last Name</label>
-                                                            <input required type="text" class="form-control multisteps-form__input" [(ngModel)]="AdminUsers.lastname" formControlName="Lname">
+                                                            <input required type="text" class="form-control multisteps-form__input" name="lastname" [(ngModel)]="AdminUsers.lastname" formControlName="Lname">
                                                         </div>
                                                         <span class="mb-2" *ngIf="Lname && Lname.invalid && Lname.touched" style="color:#D81B60; font-size: 12px;">Please enter Lastname</span>
 
                                                         <div class="input-group input-group-dynamic">
                                                             <label class="form-label">Email Address</label>
-                                                            <input required type="email" class="form-control multisteps-form__input" [(ngModel)]="AdminUsers.email" formControlName="email">
+                                                            <input required type="email" class="form-control multisteps-form__input" name="email" [(ngModel)]="AdminUsers.email" formControlName="email">
                                                         </div>
                                                         <span class="mb-2" *ngIf="email && email.invalid && email.touched" style="color:#D81B60; font-size: 12px;">Please enter Email</span>
 
                                                         <div class="input-group input-group-dynamic mt-4">
                                                             <label class="form-label">Designation</label>
-                                                            <input required type="text" class="form-control multisteps-form__input" [(ngModel)]="AdminUsers.designation" formControlName="designation">
+                                                            <input required type="text" class="form-control multisteps-form__input" name="designation" [(ngModel)]="AdminUsers.designation" formControlName="designation">
                                                         </div>
                                                         <span class="mb-2" *ngIf="designation && designation.invalid && designation.touched" style="color:#D81B60; font-size: 12px;">Please enter Designation</span>
 
-                                                        <div class="input-group input-group-dynamic mt-4">
-                                                            <!-- <label class="form-label">Designation</label> -->
-                                                            <textarea required placeholder="About User" class="form-control multisteps-form__input" [(ngModel)]="AdminUsers.about" formControlName="about"></textarea>
-                                                        </div>
-
-                                                        <span class="mb-2" *ngIf="about && about.invalid && about.touched" style="color:#D81B60; font-size: 12px;">About admin user is required</span>
-
+                                                        
                                                         <div class="mt-4"><span>Image</span></div> 
                                                         <div class="input-group input-group-dynamic">
-                                                            <input  #file type="file" (change)="createFormData($event)" (change)="preview(file.files)" accept='image/*' class="form-control multisteps-form__input" [(ngModel)]="AdminUsers.image" formControlName="about" >
+                                                            <input  #file type="file" (change)="createFormData($event)" (change)="preview(file.files)" accept='image/*' class="form-control multisteps-form__input" name="image" [(ngModel)]="AdminUsers.image" formControlName="about" >
                                                         </div>
                                                         <span class="mb-2" *ngIf="image && image.invalid && image.touched" style="color:#D81B60; font-size: 12px;">Please insert image</span>
 
                                                         <div class="input-group input-group-dynamic mt-4">
                                                             <label class="form-label">Password</label>
-                                                            <input required type="password" class="form-control multisteps-form__input" [(ngModel)]="AdminUsers.password" formControlName="pwd">
+                                                            <input required type="password" class="form-control multisteps-form__input" name="password" [(ngModel)]="AdminUsers.password" formControlName="pwd">
                                                         </div>
                                                         <span class="mb-2" *ngIf="pwd && pwd.invalid && pwd.touched" style="color:#D81B60; font-size: 12px;">Please enter Password</span>
+
+                                                        <div class="mt-4"><span>About New Admin User</span></div> 
+                                                        <div>
+                                                            <!-- <label class="form-label">Designation</label> -->
+                                                            <ckeditor [editor]="Editor" type="file" required date="About New Admin" class="form-control multisteps-form__input" name="about" [(ngModel)]="AdminUsers.about" formControlName="about"></ckeditor>
+                                                        </div>
+
+                                                        <span class="mb-2" *ngIf="about && about.invalid && about.touched" style="color:#D81B60; font-size: 12px;">About admin user is required</span>
+
                                                         
                                                     </div>
                                                 </div>

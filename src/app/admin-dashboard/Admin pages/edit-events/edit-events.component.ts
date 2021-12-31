@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormControl, Validators } from "@angular/forms";
+import * as ClassicEditor from '@ckeditor/ckeditor5-build-classic';
 
 @Component({
   selector: 'app-edit-events',
@@ -8,6 +9,7 @@ import { FormGroup, FormControl, Validators } from "@angular/forms";
 })
 export class EditEventsComponent implements OnInit {
 
+  public Editor = ClassicEditor;
 
   isAlert=false;
   alertMsg="User updated Successfully";
@@ -18,6 +20,20 @@ export class EditEventsComponent implements OnInit {
   selectedFile: any = null;
   fd = new FormData();
 
+  editEvents={
+    name:"",
+    describe:"",
+    about:"",
+    date:"",
+    coordinator:"",
+    event:"",
+    reglink:"",
+    brouchure:"",
+    prgmschedule:"",
+    spklist:"",
+    img:""
+  }
+
 
   constructor() { }
 
@@ -26,7 +42,7 @@ export class EditEventsComponent implements OnInit {
     this.fd.append('image', this.selectedFile, this.selectedFile.name);
    }
 
-  AddeventForm=new FormGroup({
+   EditeventForm=new FormGroup({
     name:new FormControl('',[Validators.required]),
     describe:new FormControl('',[Validators.required]),
     status:new FormControl('',[Validators.required]),
@@ -37,11 +53,14 @@ export class EditEventsComponent implements OnInit {
     coordinator:new FormControl('',[Validators.required]),
     event:new FormControl('',[Validators.required]),
     img:new FormControl('',[Validators.required]),
-    
+    reglink:new FormControl('',[Validators.required]),
+    brouchure:new FormControl('',[Validators.required]),
+    prgmschedule:new FormControl('',[Validators.required]),
+    spklist:new FormControl('',[Validators.required])
    
   })
 
-  addevent()
+  editevent()
   {
    console.warn("bhg");
   }
@@ -49,33 +68,50 @@ export class EditEventsComponent implements OnInit {
 
   get name()
   {
-    return this.AddeventForm.get('name');
+    return this.EditeventForm.get('name');
   }
   get describe()
   {
-    return this.AddeventForm.get('describe');
+    return this.EditeventForm.get('describe');
   }
  
   get about()
   {
-    return this.AddeventForm.get('about');
+    return this.EditeventForm.get('about');
   }
   get date()
   {
-    return this.AddeventForm.get('date');
+    return this.EditeventForm.get('date');
   }
   get coordinator()
   {
-    return this.AddeventForm.get('coordinator');
+    return this.EditeventForm.get('coordinator');
   }
   get event()
   {
-    return this.AddeventForm.get('event');
+    return this.EditeventForm.get('event');
   }
   get img()
   {
-    return this.AddeventForm.get('img');
+    return this.EditeventForm.get('img');
   }
+  get reglink()
+  {
+    return this.EditeventForm.get('reglink');
+  }
+  get brouchure()
+  {
+    return this.EditeventForm.get('brouchure');
+  }
+  get prgmschedule()
+  {
+    return this.EditeventForm.get('prgmschedule');
+  }
+  get spklist()
+  {
+    return this.EditeventForm.get('spklist');
+  }
+ 
  
 
 

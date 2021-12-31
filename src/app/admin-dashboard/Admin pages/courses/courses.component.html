@@ -180,7 +180,7 @@
                                                       <input class="form-check-input" type="checkbox" id="customCheck1" checked>
                                                   </div>
                                                   <!-- course img -->
-                                                  <img class="w-20 h-20 ms-3" src="{{course.image}}" alt="img">
+                                                  <img class="w-10 ms-3" src="{{course.image}}" alt="img">
                                                   <h4 class="ms-3 my-auto">{{course.name}}</h4>
                                               </div>
                                           </td>
@@ -188,8 +188,8 @@
                                           <td class="text-sm" style="padding-left: 3em;">{{course.fees}}</td>
                                           <td class="text-sm" style="padding-left: 3em;">{{course.description}}</td>
                                           
-                                          <td style="padding-left: 3em;">
-                                              <span class="badge badge-danger badge-sm">closed</span>
+                                          <td style="padding-left: 2em;">
+                                              <span class="badge badge-danger badge-sm">{{course.status}}</span>
                                           </td>
                                           <td class="text-sm">
                                               <a routerLink="/adminpage/view-course" data-bs-toggle="tooltip" data-bs-original-title="Preview course">

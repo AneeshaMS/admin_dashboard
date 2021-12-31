@@ -59,7 +59,7 @@ form .input-box span.details{
   border-color: #D81B60;
 }
 .user-details .input-box select:focus{
-    border-color: #D81B60
+    border-color: #D81B60;
 }
  form .gender-details .gender-title{
   font-size: 20px;
@@ -139,4 +139,11 @@ form .user-details .input-box{
   .container .content .category{
     flex-direction: column;
   }
+}
+
+
+
+
+:host ::ng-deep .ck-editor__editable_inline {
+  min-height: 10px;
 }

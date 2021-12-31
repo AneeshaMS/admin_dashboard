@@ -176,7 +176,7 @@
                                                         <div class="mt-4"><span>Name</span></div> 
                                                         <div class="input-group input-group-dynamic ">
                                                             
-                                                            <input type="text" formControlName="name" class="form-control multisteps-form__input">
+                                                            <input type="text" formControlName="name" class="form-control multisteps-form__input" name="name" [(ngModel)]="editTestimony.name">
                                                         </div>
                                                         <span class="mb-2" *ngIf="name && name.invalid && name.touched" style="color:#D81B60; font-size: 12px;">Please enter Testinomi Name</span>
 
@@ -184,7 +184,7 @@
                                                         <div class="mt-4"><span>Position</span></div> 
                                                         <div class="input-group input-group-dynamic ">
                                                             
-                                                            <input type="text" formControlName="position" class="form-control multisteps-form__input">
+                                                            <input type="text" formControlName="position" class="form-control multisteps-form__input" name="position" [(ngModel)]="editTestimony.position">
                                                         </div>
                                                         <span class="mb-2" *ngIf="position && position.invalid && position.touched" style="color:#D81B60; font-size: 12px;">Please enter Position</span>
 
@@ -192,24 +192,16 @@
                                                         <div class="mt-4"><span>Organisation</span></div> 
                                                         <div class="input-group input-group-dynamic ">
                                                             
-                                                            <input type="text" formControlName="Org" class="form-control multisteps-form__input">
+                                                            <input type="text" formControlName="Org" class="form-control multisteps-form__input" name="Org" [(ngModel)]="editTestimony.Org">
                                                         </div>
                                                         <span class="mb-2" *ngIf="Org && Org.invalid && Org.touched" style="color:#D81B60; font-size: 12px;">Please enter Organisation</span>
 
-
-                                                        <div class="mt-4"><span>Testimonial</span></div> 
-                                                        <div class="input-group input-group-dynamic ">
-                                                            
-                                                            <textarea  class="form-control multisteps-form__input" formControlName="testi"></textarea>
-                                                        </div>
-                                                        <span class="mb-2" *ngIf="testi && testi.invalid && testi.touched" style="color:#D81B60; font-size: 12px;">Please enter Testimonial</span>
-                                                        
                                                         
 
                                                         <div class="input-group input-group-dynamic mt-4 ">
                                                             <span >Course Title</span>
                                                             <!-- <input type="text" class="form-control multisteps-form__input"> -->
-                                                            <select class="form-select" formControlName="title" style="width:100%; height:3em; border: none; border-bottom:2px solid #ced4da;" formControlName="status" placeholder="Course Title" required> 
+                                                            <select class="form-select" formControlName="title" style="width:100%; height:3em; border: none; border-bottom:2px solid #ced4da;"  name="title" [(ngModel)]="editTestimony.title" placeholder="Course Title" required> 
                                                                 <option selected>--Choose--</option>
                                                                 <option value="Full Stack Developer">Full Stack Develoment</option>
                                                                 <option value="Software Testing">Software Testing</option>
@@ -220,12 +212,19 @@
                                                         <span class="mb-2" *ngIf="title && title.invalid && title.touched" style="color:#D81B60; font-size: 12px;">Please choose one</span>
                                                         
                                                         
-                                                        
                                                         <div class="mt-4"><span>Image</span></div> 
                                                         <div class="input-group input-group-dynamic">
-                                                            <input  #file type="file"  formControlName="img" (change)="createFormData($event)" (change)="preview(file.files)" accept='image/*' class="form-control multisteps-form__input">
+                                                            <input  #file type="file"  formControlName="img" (change)="createFormData($event)" (change)="preview(file.files)" accept='image/*' class="form-control multisteps-form__input" name="img" [(ngModel)]="editTestimony.img" style="padding-right:10px; letter-spacing: 2px; color:#D81B60; font-size: 16px;">
                                                         </div>
                                                         <span class="mb-2" *ngIf="img && img.invalid && img.touched" style="color:#D81B60; font-size: 12px;">Please insert image</span>
+
+                                                        <div class="mt-4"><span>Testimonial</span></div> 
+                                                        <div>
+                                                            
+                                                            <ckeditor [editor]="Editor"  class="form-control multisteps-form__input" formControlName="testi" name="testi" [(ngModel)]="editTestimony.testi"></ckeditor>
+                                                        </div>
+                                                        <span class="mb-2" *ngIf="testi && testi.invalid && testi.touched" style="color:#D81B60; font-size: 12px;">Please enter Testimonial</span>
+                                                        
                                                         <div class="button-row d-flex mt-4">
                                                             <!-- <button class="btn btn-outline-dark mb-0 js-btn-prev" type="button" title="Prev">Prev</button> -->
                                                             <button [disabled]="Edittestimony.invalid"  class="btn bg-gradient-dark ms-auto mb-0 js-btn-next" type="button" title="Next">Edit Testimony</button>

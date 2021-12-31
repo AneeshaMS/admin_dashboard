@@ -15,7 +15,8 @@ export class CoursesComponent implements OnInit {
     name:"",
     category:"",
     fees:"",
-    description:""
+    description:"",
+    status:""
   }]
 
   constructor() { }

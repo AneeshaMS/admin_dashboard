@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormControl, Validators } from "@angular/forms";
+import * as ClassicEditor from '@ckeditor/ckeditor5-build-classic';
 
 @Component({
   selector: 'app-addcourse',
@@ -8,6 +9,7 @@ import { FormGroup, FormControl, Validators } from "@angular/forms";
 })
 export class AddcourseComponent implements OnInit {
 
+  public Editor = ClassicEditor;
 
   isAlert=false;
   alertMsg="User updated Successfully";
@@ -19,6 +21,25 @@ export class AddcourseComponent implements OnInit {
   selectedFile: any = null;
   formData: any = {};
   fd = new FormData();
+
+  addcourse={
+    title:"",
+    describe:"",
+    status:"",
+    rate:"",
+    category:"",
+    about:"",
+    date:"",
+    eligible:"",
+    fee:"",
+    entrance:"",
+    refund:"",
+    img:"",
+    delivery:"",
+    intern:"",
+    knowledge:"",
+    sponsour:""
+  }
 
 
   constructor() { }

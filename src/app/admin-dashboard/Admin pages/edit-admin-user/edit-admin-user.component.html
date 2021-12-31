@@ -177,44 +177,47 @@
                                                     <div class="col-12 col-sm-8 mt-4 mt-sm-0 text-start">
                                                         <div class="input-group input-group-dynamic mb-4">
                                                             <label class="form-label">User Name</label>
-                                                            <input type="text" formControlName="usrname" class="form-control multisteps-form__input">
+                                                            <input type="text" formControlName="usrname" class="form-control multisteps-form__input" name="username" [(ngModel)]="editAdminUsers.username">
                                                         </div>
                                                         <span class="mb-2" *ngIf="usrname && usrname.invalid && usrname.touched" style="color:#D81B60; font-size: 12px;">Please enter username</span>
                                                         <div class="input-group input-group-dynamic mb-4">
                                                             <label class="form-label">First Name</label>
-                                                            <input type="text"  formControlName="Fname" class="form-control multisteps-form__input">
+                                                            <input type="text"  formControlName="Fname" class="form-control multisteps-form__input" name="firstname" [(ngModel)]="editAdminUsers.firstname">
                                                         </div>
                                                         <span class="mb-2" *ngIf="Fname && Fname.invalid && Fname.touched" style="color:#D81B60; font-size: 12px;">Please enter Firstname</span>
                                                         <div class="input-group input-group-dynamic mb-4">
                                                             <label class="form-label">Last Name</label>
-                                                            <input type="text" formControlName="Lname" class="form-control multisteps-form__input">
+                                                            <input type="text" formControlName="Lname" class="form-control multisteps-form__input" name="lastname" [(ngModel)]="editAdminUsers.lastname">
                                                         </div>
                                                         <span class="mb-2" *ngIf="Lname && Lname.invalid && Lname.touched" style="color:#D81B60; font-size: 12px;">Please enter Lastname</span>
                                                         <div class="input-group input-group-dynamic">
                                                             <label class="form-label">Email Address</label>
-                                                            <input type="email"  formControlName="email" class="form-control multisteps-form__input">
+                                                            <input type="email"  formControlName="email" class="form-control multisteps-form__input" name="email" [(ngModel)]="editAdminUsers.email">
                                                         </div>
                                                         <span class="mb-2" *ngIf="email && email.invalid && email.touched" style="color:#D81B60; font-size: 12px;">Please enter Email</span>
                                                         <div class="input-group input-group-dynamic mt-4">
                                                             <label class="form-label">Designation</label>
-                                                            <input type="text" formControlName="designation" class="form-control multisteps-form__input">
+                                                            <input type="text" formControlName="designation" class="form-control multisteps-form__input" name="designation" [(ngModel)]="editAdminUsers.designation">
                                                         </div>
                                                         <span class="mb-2" *ngIf="designation && designation.invalid && designation.touched" style="color:#D81B60; font-size: 12px;">Please enter Designation</span>
-                                                        <div class="input-group input-group-dynamic mt-4">
-                                                            <!-- <label class="form-label">Designation</label> -->
-                                                            <textarea placeholder="About User" formControlName="about" class="form-control multisteps-form__input"></textarea>
-                                                        </div>
-                                                        <span class="mb-2" *ngIf="about && about.invalid && about.touched" style="color:#D81B60; font-size: 12px;">About admin user is required</span>
+                                                        
                                                         <div class="mt-4"><span>Image</span></div> 
                                                         <div class="input-group input-group-dynamic">
-                                                            <input  #file type="file" formControlName="about" (change)="createFormData($event)" (change)="preview(file.files)" accept='image/*' class="form-control multisteps-form__input">
+                                                            <input  #file type="file" formControlName="about" name="image" [(ngModel)]="editAdminUsers.image" (change)="createFormData($event)" (change)="preview(file.files)" accept='image/*' class="form-control multisteps-form__input">
                                                         </div>
                                                         <span class="mb-2" *ngIf="image && image.invalid && image.touched" style="color:#D81B60; font-size: 12px;">Please insert image</span>
                                                         <div class="input-group input-group-dynamic mt-4">
                                                             <label class="form-label">Password</label>
-                                                            <input type="password" formControlName="pwd" class="form-control multisteps-form__input">
+                                                            <input type="password" formControlName="pwd" name="password" [(ngModel)]="editAdminUsers.password" class="form-control multisteps-form__input">
                                                         </div>
                                                         <span class="mb-2" *ngIf="pwd && pwd.invalid && pwd.touched" style="color:#D81B60; font-size: 12px;">Please enter Password</span>
+
+                                                        <div class="mt-4"><span>About New Admin User</span></div>
+                                                        <div>
+                                                            <!-- <label class="form-label">Designation</label> -->
+                                                            <ckeditor [editor]="Editor" placeholder="About User" formControlName="about" class="form-control multisteps-form__input" name="about" [(ngModel)]="editAdminUsers.about"></ckeditor>
+                                                        </div>
+                                                        <span class="mb-2" *ngIf="about && about.invalid && about.touched" style="color:#D81B60; font-size: 12px;">About admin user is required</span>
                                                     </div>
                                                 </div>
                                                 

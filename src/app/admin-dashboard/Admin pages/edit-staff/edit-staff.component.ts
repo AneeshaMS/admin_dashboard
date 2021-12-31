@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormControl, Validators } from "@angular/forms";
+import * as ClassicEditor from '@ckeditor/ckeditor5-build-classic';
 
 @Component({
   selector: 'app-edit-staff',
@@ -8,6 +9,7 @@ import { FormGroup, FormControl, Validators } from "@angular/forms";
 })
 export class EditStaffComponent implements OnInit {
 
+  public Editor = ClassicEditor;
 
   isAlert=false;
   alertMsg="User updated Successfully";
@@ -18,6 +20,14 @@ export class EditStaffComponent implements OnInit {
 
   selectedFile:any=null;
   fd=new FormData();
+
+  editStaff={
+    name:"",
+    status:"",
+    about:"",
+    img:""
+
+  }
 
   constructor() { }
 

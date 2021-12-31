@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormControl, Validators } from "@angular/forms";
+import * as ClassicEditor from '@ckeditor/ckeditor5-build-classic';
 
 @Component({
   selector: 'app-edit-admin-user',
@@ -8,6 +9,7 @@ import { FormGroup, FormControl, Validators } from "@angular/forms";
 })
 export class EditAdminUserComponent implements OnInit {
 
+  public Editor = ClassicEditor;
 
   isAlert=false;
   alertMsg="User updated Successfully";
@@ -17,6 +19,17 @@ export class EditAdminUserComponent implements OnInit {
 
   selectedFile:any=null;
   fd=new FormData();
+
+  editAdminUsers={
+    username:"",
+    firstname:"",
+    lastname:"",
+    email:"",
+    designation:"",
+    about:"",
+    image:"",
+    password:""
+}
 
   constructor() { }
 

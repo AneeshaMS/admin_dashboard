@@ -157,44 +157,63 @@
         <div class="user-details">
           <div class="input-box">
             <span class="details">Event Name</span>
-            <input type="text"  class="form-control"  formControlName="name" required>
+            <input type="text"  class="form-control"  formControlName="name" name="name" [(ngModel)]="addEvents.name" required>
             <small style="color:#D81B60;" *ngIf="name && name.invalid && name.touched">Event Name is required</small>
           </div>
           <!-- <small style="color:#D81B60;" *ngIf="title && title.invalid && title.touched">Email is required</small> -->
           <div class="input-box">
             <span class="details">Short Description</span>
-            <input type="text"  class="form-control"  formControlName="describe" required>
+            <input type="text"  class="form-control"  formControlName="describe" name="describe" [(ngModel)]="addEvents.describe" required>
             <small style="color:#D81B60;" *ngIf="describe && describe.invalid && describe.touched">Event Short Description is required</small>
           </div>
           
           
           <div class="input-box">
             <span class="details">Event More Detail</span>
-            <textarea class="form-control"  formControlName="about" required></textarea>
+            <ckeditor [editor]="Editor" class="form-control"  formControlName="about" name="about" [(ngModel)]="addEvents.about" required></ckeditor>
             <!-- <input type="text" class="form-control"  formControlName="about" required> -->
             <small style="color:#D81B60;" *ngIf="about && about.invalid && about.touched">About event is required</small>
           </div>
           <div class="input-box">
             <span class="details">Date and Location Details</span>
-            <textarea class="form-control"  formControlName="date" required></textarea>
+            <ckeditor [editor]="Editor" class="form-control"  formControlName="date" name="date" [(ngModel)]="addEvents.date" required></ckeditor>
             <!-- <input type="text" class="form-control"  formControlName="about" required> -->
             <small style="color:#D81B60;" *ngIf="date && date.invalid && date.touched">Date and Location Details are required</small>
           </div>
           <div class="input-box">
             <span class="details">Coordinators Details</span>
-            <textarea class="form-control"  formControlName="coordinator" required></textarea>
+            <ckeditor [editor]="Editor" class="form-control"  formControlName="coordinator" name="coordinator" [(ngModel)]="addEvents.coordinator" required></ckeditor>
             <!-- <input type="text" class="form-control"  formControlName="eligible" required> -->
             <small style="color:#D81B60;" *ngIf="coordinator && coordinator.invalid && coordinator.touched">Coordinators Details is required</small>
           </div>
+          
           <div class="input-box">
-            <span class="details">Date</span>
-            <input type="text"  class="form-control"  formControlName="event" required>
-            <small style="color:#D81B60;" *ngIf="event && event.invalid && event.touched">Event date is required</small>
+            <span class="details">Registration Link</span>
+            <ckeditor [editor]="Editor" type="text"  class="form-control"  formControlName="reglink" name="reglink" [(ngModel)]="addEvents.reglink" required></ckeditor>
+            <small style="color:#D81B60;" *ngIf="reglink && reglink.invalid && reglink.touched">Registration Link  is required</small>
+          </div>
+
+          <div class="input-box">
+            <span class="details">Brouchure Link</span>
+            <ckeditor [editor]="Editor" type="text"  class="form-control"  formControlName="brouchure" name="brouchure" [(ngModel)]="addEvents.brouchure" required></ckeditor>
+            <small style="color:#D81B60;" *ngIf="brouchure && brouchure.invalid && brouchure.touched">Brouchure Link  is required</small>
+          </div>
+
+          <div class="input-box">
+            <span class="details">Program Schedule</span>
+            <ckeditor [editor]="Editor" type="text"  class="form-control"  formControlName="prgmschedule" name="prgmschedule" [(ngModel)]="addEvents.prgmschedule" required></ckeditor>
+            <small style="color:#D81B60;" *ngIf="prgmschedule && prgmschedule.invalid && prgmschedule.touched">Program Schedule  is required</small>
+          </div>
+
+          <div class="input-box">
+            <span class="details">Speakers List</span>
+            <ckeditor [editor]="Editor" type="text"  class="form-control"  formControlName="spklist" name="spklist" [(ngModel)]="addEvents.spklist" required></ckeditor>
+            <small style="color:#D81B60;" *ngIf="spklist && spklist.invalid && spklist.touched">Speakers List  is required</small>
           </div>
           
           <div class="input-box">
             <span class="details"> Image</span>
-            <input type="file"  class="form-control"  formControlName="img" required>
+            <input type="file"  class="form-control"  formControlName="img" name="img" [(ngModel)]="addEvents.img" required>
             <small style="color:#D81B60;" *ngIf="img && img.invalid && img.touched" (change)="createFormData($event)"> Image is required</small>
           </div>
         </div>
