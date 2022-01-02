@@ -2,6 +2,7 @@
     background-color: #f8f9fa;
 }
 
-textarea ::placeholder{
-    color:#344767;
+
+.form-check-label{
+    letter-spacing: 2px;
 }

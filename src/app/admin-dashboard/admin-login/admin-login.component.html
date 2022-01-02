@@ -43,22 +43,27 @@
                 </div>
               </div>
               <div class="card-body">
+                <!-- form -->
                 <form role="form" class="text-start" [formGroup]="loginForm" (ngSubmit)="loginAdmin()">
+
                   <div class="input-group input-group-outline my-3">
                     <label class="form-label">Email</label>
                     <input type="email" class="form-control"  formControlName="email">
                   </div>
                   <small style="color:#D81B60;" *ngIf="email && email.invalid && email.touched">Email is required</small>
+
                   <div class="input-group input-group-outline mb-3">
                     <label class="form-label">Password</label>
                     <input type="password" class="form-control"  formControlName="password">
                   </div>
                   <small style="color:#D81B60;" *ngIf="password && password.invalid && password.touched">Password is required</small>
+
                   <div class="form-check form-switch d-flex align-items-center mb-3">
                     <input class="form-check-input" type="checkbox" id="rememberMe">
                     <label class="form-check-label mb-0 ms-2" for="rememberMe">Remember me</label>
                     <a routerLink="/adminpage/reset" class="change_pass">Forget Password</a>
                   </div>
+                  
                   <div class="text-center">
                     <button [disabled]="loginForm.invalid" routerLink="/adminpage/dashboard" type="button" class="btn bg-gradient-primary w-100 my-4 mb-2">Sign in</button>
                   </div>

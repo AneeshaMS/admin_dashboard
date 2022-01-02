@@ -48,6 +48,10 @@
              
             ],
             "scripts": [
+
+              "node_modules/jquery/dist/jquery.min.js",
+
+
               "src/assets/js/vendor/bootstrap.min.js",
               "src/assets/js/vendor/jquery-2.2.4.min.js",
               "src/assets/js/vendor/popper.min.js",

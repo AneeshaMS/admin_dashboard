@@ -9,8 +9,21 @@ import * as XLSX from 'xlsx';
 })
 export class AcademicMembershipComponent implements OnInit {
 
+  title="Academic Membership";
+
+  // excelsheet
+
   fileName= 'ExcelSheet.xlsx'; 
-  searchText:any;
+  
+  searchText:any; //search box
+
+  academicappls = [
+    { slno:"",
+     memberid: "", 
+     name: "", 
+     website: ""
+     }
+    ]
 
   constructor() { }
 
@@ -20,7 +33,7 @@ export class AcademicMembershipComponent implements OnInit {
   ngOnInit(): void {
   }
 
-
+// excelsheet
   exportexcel(): void 
     {
        /* table id is passed over here */   
@@ -35,12 +48,5 @@ export class AcademicMembershipComponent implements OnInit {
        XLSX.writeFile(wb, this.fileName);
 			
     }
-    heroes = [
-      { slno:1, memberid: 11, name: 'Mr. Nice', website: 'India' },
-      { slno:2, memberid: 12, name: 'gggvg', website: 'mhhhh' },
-      { slno:3, memberid: 13, name: 'hvxss', website: 'chine' },
-      { slno:4, memberid: 15, name: 'qijh', website: 'hkoghh' },
-      { slno:5, memberid: 16, name: 'mnhxds', website: 'zfffg' },
-      { slno:6, memberid: 14, name: 'wsas', website: 'innnn' }
-    ]
+    
 }

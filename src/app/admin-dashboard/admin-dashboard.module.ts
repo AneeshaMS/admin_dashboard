@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { Ng2SearchPipeModule } from 'ng2-search-filter';
 import { CKEditorModule } from '@ckeditor/ckeditor5-angular';
+import { DatepickerModule, BsDatepickerModule } from 'ngx-bootstrap/datepicker';
 
 
 import { AdminDashboardRoutingModule } from './admin-dashboard-routing.module';
@@ -18,13 +19,13 @@ import { ViewCourseComponent } from './Admin pages/view-course/view-course.compo
 import { AddAdminUserComponent } from './Admin pages/add-admin-user/add-admin-user.component';
 import { EditAdminUserComponent } from './Admin pages/edit-admin-user/edit-admin-user.component';
 import { AdminUserComponent } from './Admin pages/admin-user/admin-user.component';
-import { AdminImgUploadComponent } from './Admin pages/admin-img-upload/admin-img-upload.component';
+
 import { ViewAdminUserComponent } from './Admin pages/view-admin-user/view-admin-user.component';
 import { AddEventsComponent } from './Admin pages/add-events/add-events.component';
 import { EditEventsComponent } from './Admin pages/edit-events/edit-events.component';
 import { ViewEventComponent } from './Admin pages/view-event/view-event.component';
 import { EventsComponent } from './Admin pages/events/events.component';
-import { AddNewsComponent } from './Admin pages/add-news/add-news.component';
+
 import { AcademicMembershipComponent } from './Admin pages/academic-membership/academic-membership.component';
 import { AddStaffComponent } from './Admin pages/add-staff/add-staff.component';
 import { StaffsComponent } from './Admin pages/staffs/staffs.component';
@@ -37,6 +38,8 @@ import { ViewTestimonyComponent } from './Admin pages/view-testimony/view-testim
 import { RegisteredUsersComponent } from './Admin pages/registered-users/registered-users.component';
 import { PartnershipComponent } from './Admin pages/partnership/partnership.component';
 import { CorporateComponent } from './Admin pages/corporate/corporate.component';
+import { NavbarComponent } from './Admin pages/navbar/navbar.component';
+import { FooterComponent } from './Admin pages/footer/footer.component';
 
 
 
@@ -53,14 +56,12 @@ import { CorporateComponent } from './Admin pages/corporate/corporate.component'
     ViewCourseComponent,
     AddAdminUserComponent,
     EditAdminUserComponent,
-    AdminUserComponent,
-    AdminImgUploadComponent,
+    AdminUserComponent, 
     ViewAdminUserComponent,
     AddEventsComponent,
     EditEventsComponent,
     ViewEventComponent,
     EventsComponent,
-    AddNewsComponent,
     AcademicMembershipComponent,
     AddStaffComponent,
     StaffsComponent,
@@ -72,7 +73,9 @@ import { CorporateComponent } from './Admin pages/corporate/corporate.component'
     ViewTestimonyComponent,
     RegisteredUsersComponent,
     PartnershipComponent,
-    CorporateComponent
+    CorporateComponent,
+    NavbarComponent,
+    FooterComponent
   ],
   imports: [
     CommonModule,
@@ -80,7 +83,9 @@ import { CorporateComponent } from './Admin pages/corporate/corporate.component'
     FormsModule,
     ReactiveFormsModule,
     Ng2SearchPipeModule,
-    CKEditorModule
+    CKEditorModule,
+    DatepickerModule.forRoot(), 
+    BsDatepickerModule.forRoot()
     
   ],
   exports:[
@@ -88,7 +93,7 @@ import { CorporateComponent } from './Admin pages/corporate/corporate.component'
     DashboardComponent,
     AdminLoginComponent,
     ChangePasswordComponent,
-    
+   
   ]
 })
 export class AdminDashboardModule { }

@@ -17,6 +17,7 @@ export class AddAdminUserComponent implements OnInit {
   isAlert2=false;
   alertMsg1="Error Occured";
 
+  myFlagForSlideToggle: boolean = false;
 
   AdminUsers={
       username:"",
@@ -33,13 +34,15 @@ export class AddAdminUserComponent implements OnInit {
  
   fd=new FormData();
 
-  constructor() { }
+  constructor() {}
+
+  // image upload
 
   createFormData(event:any){
     this.selectedFile=<File>event.target.files[0];
     this.fd.append('image',this.selectedFile,this.selectedFile.name)
   }
-
+// image preview
   public imagePath:any;
  imgURL: any;
 public message: string;
@@ -58,6 +61,9 @@ public message: string;
  this.imgURL = reader.result; 
 }
 }
+
+
+// validation
 
 AdduserForm=new FormGroup({
     usrname:new FormControl('',[Validators.required]),

@@ -9,14 +9,18 @@ import * as ClassicEditor from '@ckeditor/ckeditor5-build-classic';
 })
 export class AddEventsComponent implements OnInit {
 
-  public Editor = ClassicEditor;
+// ckeditor variable
+  public Editor = ClassicEditor; 
 
+// Alert success
   isAlert=false;
   alertMsg="User updated Successfully";
-
+// Alert danger
   isAlert2=false;
   alertMsg1="Error Occured";
 
+
+// image upload
   selectedFile: any = null;
   fd = new FormData();
 
@@ -43,6 +47,8 @@ export class AddEventsComponent implements OnInit {
     this.fd.append('image', this.selectedFile, this.selectedFile.name);
    }
 
+
+  //  validation
   AddeventForm=new FormGroup({
     name:new FormControl('',[Validators.required]),
     describe:new FormControl('',[Validators.required]),

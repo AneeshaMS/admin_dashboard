@@ -7,6 +7,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ViewAdminUserComponent implements OnInit {
 
+  adminUsers={
+    image:"",
+    Username:"",
+    FName:"",
+    LName:"",
+    Email:"",
+    Designation:""
+  }
+
+
   constructor() { }
 
   ngOnInit(): void {
