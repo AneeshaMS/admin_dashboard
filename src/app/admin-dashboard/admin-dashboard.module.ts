@@ -7,7 +7,7 @@ import { DatepickerModule, BsDatepickerModule } from 'ngx-bootstrap/datepicker';
 
 
 import { AdminDashboardRoutingModule } from './admin-dashboard-routing.module';
-import { AdminMainComponent } from './Admin pages/admin-main/admin-main.component';
+
 import { DashboardComponent } from './Admin pages/dashboard/dashboard.component';
 import { AdminLoginComponent } from './admin-login/admin-login.component';
 import { ChangePasswordComponent } from './change-password/change-password.component';
@@ -45,7 +45,7 @@ import { FooterComponent } from './Admin pages/footer/footer.component';
 
 @NgModule({
   declarations: [
-    AdminMainComponent,
+   
     DashboardComponent,
     AdminLoginComponent,
     ChangePasswordComponent,
@@ -89,7 +89,7 @@ import { FooterComponent } from './Admin pages/footer/footer.component';
     
   ],
   exports:[
-    AdminMainComponent,
+    
     DashboardComponent,
     AdminLoginComponent,
     ChangePasswordComponent,

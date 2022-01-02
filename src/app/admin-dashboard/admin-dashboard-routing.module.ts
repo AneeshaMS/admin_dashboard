@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import {AdminMainComponent } from './Admin pages/admin-main/admin-main.component';
+
 import { DashboardComponent } from './Admin pages/dashboard/dashboard.component';
 import {AdminLoginComponent} from './admin-login/admin-login.component';
 import {ChangePasswordComponent} from './change-password/change-password.component';
@@ -33,10 +33,7 @@ import { PartnershipComponent } from './Admin pages/partnership/partnership.comp
 import { CorporateComponent } from './Admin pages/corporate/corporate.component';
 
 const routes: Routes = [
-  {
-    path:'main',
-    component:AdminMainComponent
-  },
+ 
       {
         path:'dashboard',
        component:DashboardComponent
