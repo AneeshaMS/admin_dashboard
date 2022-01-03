@@ -6,6 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./view-admin-user.component.css']
 })
 export class ViewAdminUserComponent implements OnInit {
+  title="View Admin User";
 
   adminUsers={
     image:"",

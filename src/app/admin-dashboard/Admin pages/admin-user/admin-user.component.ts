@@ -6,6 +6,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./admin-user.component.css']
 })
 export class AdminUserComponent implements OnInit {
+  title="Admin User";
+
   searchText:any;
 
   adminUsers=[{

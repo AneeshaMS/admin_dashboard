@@ -7,6 +7,7 @@ import { Chart } from 'node_modules/chart.js';
   styleUrls: ['./dashboard.component.css']
 })
 export class DashboardComponent implements OnInit {
+  title="Dashboard";
 
   constructor() { }
 

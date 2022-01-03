@@ -6,6 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./view-event.component.css']
 })
 export class ViewEventComponent implements OnInit {
+  title="View Event";
 
   constructor() { }
 

@@ -9,6 +9,8 @@ import * as XLSX from 'xlsx';
 })
 export class AcademicMembershipComponent implements OnInit {
 
+  
+
   title="Academic Membership";
 
   // excelsheet

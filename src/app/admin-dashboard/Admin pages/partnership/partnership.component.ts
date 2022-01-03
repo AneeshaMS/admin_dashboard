@@ -7,6 +7,7 @@ import * as XLSX from 'xlsx';
   styleUrls: ['./partnership.component.css']
 })
 export class PartnershipComponent implements OnInit {
+  title="Partnership";
 
   /*name of the excel-file which will be downloaded. */ 
 fileName= 'ExcelSheet.xlsx';  

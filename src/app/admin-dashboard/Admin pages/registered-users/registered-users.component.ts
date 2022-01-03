@@ -8,7 +8,7 @@ import * as XLSX from 'xlsx';
 })
 export class RegisteredUsersComponent implements OnInit {
 
-  	
+  title="Course Registered Users";
 /*name of the excel-file which will be downloaded. */ 
 fileName= 'ExcelSheet.xlsx';  
 searchText:any;

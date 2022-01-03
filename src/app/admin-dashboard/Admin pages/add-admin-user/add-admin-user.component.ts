@@ -8,6 +8,7 @@ import * as ClassicEditor from '@ckeditor/ckeditor5-build-classic';
   styleUrls: ['./add-admin-user.component.css']
 })
 export class AddAdminUserComponent implements OnInit {
+  title="Add Admin User";
 
   public Editor = ClassicEditor;
   

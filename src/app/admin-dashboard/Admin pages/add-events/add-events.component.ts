@@ -8,6 +8,7 @@ import * as ClassicEditor from '@ckeditor/ckeditor5-build-classic';
   styleUrls: ['./add-events.component.css']
 })
 export class AddEventsComponent implements OnInit {
+  title="Add Events";
 
 // ckeditor variable
   public Editor = ClassicEditor; 

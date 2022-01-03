@@ -9,6 +9,8 @@ import * as ClassicEditor from '@ckeditor/ckeditor5-build-classic';
 })
 export class EditEventsComponent implements OnInit {
 
+  title="Edit Events";
+
   public Editor = ClassicEditor;
 
   isAlert=false;

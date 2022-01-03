@@ -6,6 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./staffs.component.css']
 })
 export class StaffsComponent implements OnInit {
+  title="Staffs";
 
   searchText:any;
 

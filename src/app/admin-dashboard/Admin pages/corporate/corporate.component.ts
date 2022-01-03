@@ -9,7 +9,7 @@ import { FormGroup, FormControl, Validators } from "@angular/forms";
 export class CorporateComponent implements OnInit {
 
   
-
+  title="Corporate Membership";
 
 
 
@@ -18,7 +18,9 @@ fileName= 'ExcelSheet.xlsx';
 
 searchText:any;
 
+corporateapl=[{
 
+}]
 
   constructor() {}
 

@@ -8,6 +8,7 @@ import * as ClassicEditor from '@ckeditor/ckeditor5-build-classic';
   styleUrls: ['./add-testimony.component.css']
 })
 export class AddTestimonyComponent implements OnInit {
+  Title="Add Testimony";
 
   public Editor = ClassicEditor;
 

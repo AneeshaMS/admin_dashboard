@@ -6,6 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./view-course.component.css']
 })
 export class ViewCourseComponent implements OnInit {
+  title="View Course";
 
   constructor() { }
 

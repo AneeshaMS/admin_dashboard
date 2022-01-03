@@ -8,6 +8,7 @@ import * as ClassicEditor from '@ckeditor/ckeditor5-build-classic';
   styleUrls: ['./add-staff.component.css']
 })
 export class AddStaffComponent implements OnInit {
+  title="Add Staffs";
 
   public Editor = ClassicEditor;
   

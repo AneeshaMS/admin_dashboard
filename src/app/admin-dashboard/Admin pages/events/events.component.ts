@@ -6,6 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./events.component.css']
 })
 export class EventsComponent implements OnInit {
+  title="Events";
   searchText:any;
 
   events=[{

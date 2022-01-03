@@ -9,6 +9,8 @@ import * as ClassicEditor from '@ckeditor/ckeditor5-build-classic';
 })
 export class EditAdminUserComponent implements OnInit {
 
+  title="Edit Admin User";
+
   public Editor = ClassicEditor;
 
   isAlert=false;

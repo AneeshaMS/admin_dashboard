@@ -9,6 +9,7 @@ import * as ClassicEditor from '@ckeditor/ckeditor5-build-classic';
   styleUrls: ['./edit-courses.component.css']
 })
 export class EditCoursesComponent implements OnInit {
+  Title="Edit Courses";
 
   public Editor = ClassicEditor;
 
