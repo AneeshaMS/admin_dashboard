@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormControl, Validators } from "@angular/forms";
 import * as ClassicEditor from '@ckeditor/ckeditor5-build-classic';
 
+
 @Component({
   selector: 'app-add-staff',
   templateUrl: './add-staff.component.html',
@@ -10,7 +11,8 @@ import * as ClassicEditor from '@ckeditor/ckeditor5-build-classic';
 export class AddStaffComponent implements OnInit {
   title="Add Staffs";
 
-  public Editor = ClassicEditor;
+  editor = ClassicEditor;
+  data: any = `<p>Hello, world!</p>`;
   
   isAlert=false;
   alertMsg="User updated Successfully";

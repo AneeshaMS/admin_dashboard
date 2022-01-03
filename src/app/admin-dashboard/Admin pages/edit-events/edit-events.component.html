@@ -173,6 +173,7 @@
           <!-- Event More Detail -->
           <div class="input-box">
             <span class="details">Event More Detail</span>
+            <ckeditor [editor]="Editor" class="form-control"  formControlName="about" name="about" [(ngModel)]="editEvents.about" required></ckeditor>       
             <small style="color:#D81B60;" *ngIf="about && about.invalid && about.touched">About event is required</small>
           </div>
           <!-- Date and Location Details -->

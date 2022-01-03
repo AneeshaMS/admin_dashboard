@@ -219,8 +219,8 @@
                                                         <!-- about -->
                                                         <div class="mt-4"><span>About</span></div> 
                                                         <div>
-                                                            
-                                                            <ckeditor [editor]="Editor" formControlName="about" class="form-control multisteps-form__input" name="about" [(ngModel)]="addStaff.about"></ckeditor>
+                                                            <ckeditor [config]="{ toolbar: [ 'bold', 'italic', '|', 'undo', 'redo', '-', 'numberedList', 'bulletedList' ] }"  [editor]="editor" [data]="data"></ckeditor>
+                                                            <!-- <ckeditor [editor]="Editor" formControlName="about" class="form-control multisteps-form__input" name="about" [(ngModel)]="addStaff.about"></ckeditor> -->
                                                         </div>
                                                         <span class="mb-2" *ngIf="about && about.invalid && about.touched" style="color:#D81B60; font-size: 12px;">About Staff is required</span>
                                                         <!-- image upload -->
